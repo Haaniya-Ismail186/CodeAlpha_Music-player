@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodies - Home</title>
+    <link rel="stylesheet" href="albums style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+    <header class="mobile-header">
+        <div class="logo"><h2>Melodies</h2></div>
+        <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="app-container">
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="logo desktop-logo-only">
+                <h2>Melodies</h2>
+            </div>
+
+            <div class="sidebar-menu-wrapper">
+                
+                <div class="menu-group">
+                    <p class="menu-title">Menu</p>
+                    <nav class="nav-menu">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                        <a href="discover.html"><i class="fa-solid fa-compass"></i> <span>Discover</span></a>
+                        <a href="albums.html" class="active"><i class="fa-solid fa-compact-disc"></i> <span>Albums</span></a>
+                        <a href="artists.html"><i class="fa-solid fa-microphone"></i> <span>Artists</span></a>
+                    </nav>
+                </div>
+
+                <div class="menu-group">
+                    <p class="menu-title">Library</p>
+                    <nav class="nav-menu">
+                        <a href="#"><i class="fa-solid fa-clock"></i> <span>Recently Added</span></a>
+                        <a href="#"><i class="fa-solid fa-heart"></i> <span>Most Played</span></a>
+                    </nav>
+                </div>
+
+                <div class="menu-group">
+                    <p class="menu-title">Playlist and Favorite</p>
+                    <nav class="nav-menu">
+                        <a href="#"><i class="fa-solid fa-star"></i> <span>Your Favorite</span></a>
+                        <a href="#"><i class="fa-solid fa-list"></i> <span>Your Playlist</span></a>
+                        <a href="#" class="add-playlist"><i class="fa-solid fa-plus"></i> <span>Add Playlist</span></a>
+                    </nav>
+                </div>
+                
+            </div> <div class="footer-links">
+                <a href="#setting"><i class="fa-solid fa-gear"></i> <span>Setting</span></a>
+                <a href="#logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout</span></a>
+            </div>
+            
+        </aside> 
+
+        <main class="main-content">
+            
+            <div class="top-search-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for music, artists...">
+                </div>
+                <div class="top-nav-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Premium</a>
+                    <button class="btn-top-premium">Log In</button>
+                    <button class="btn-top-login">Sign Up</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+<div class="playlist-table-container">
+    <div class="tracklist-table-header">
+        <div class="header-num">#</div>
+        <div class="header-title">Title</div>
+        <div class="header-release">Release Date</div>
+        <div class="header-album">album</div>
+        <div class="header-time">Time</div>
+    </div>
+
+    <div class="tracks-wrapper">
+        <div class="track-row current-playing">
+            <div class="col-num"> 1
+                <!-- <i class="fas fa-volume-up animated-sound-icon"></i> -->
+            </div>
+            <div class="col-title">
+                <img src="images/cover1.png" alt="Surfcore" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Surfcore</span>
+                    <span class="song-artist">The Neighbourhood</span>
+                </div>
+            </div>
+            <div class="col-release">Nov 4, 2023</div>
+            <div class="col-album">Hard to Imagine Neighbourhood Ever Changing</div>
+            <div class="col-actions">
+                <span class="duration-text">3:26</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">2</div>
+            <div class="col-title">
+                <img src="images/cover2.png" alt="Skyfall Beats" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Skyfall Beats</span>
+                    <span class="song-artist">nightmares</span>
+                </div>
+            </div>
+            <div class="col-release">Oct 26, 2023</div>
+            <div class="col-album">nightmares</div>
+            <div class="col-actions">
+                <span class="duration-text">2:45</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">3</div>
+            <div class="col-title">
+                <img src="images/cover3.png" alt="Greedy" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Greedy</span>
+                    <span class="song-artist">tate mcrae</span>
+                </div>
+            </div>
+            <div class="col-release">Nov 30, 2023</div>
+            <div class="col-album">Greedy</div>
+            <div class="col-actions">
+                <span class="duration-text">2:11</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">4</div>
+            <div class="col-title">
+                <img src="images/cover4.png" alt="Lovin On me" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Lovin On me</span>
+                    <span class="song-artist">jack harlow</span>
+                </div>
+            </div>
+            <div class="col-release">Dec 15, 2023</div>
+            <div class="col-album">Lovin On me</div>
+            <div class="col-actions">
+                <span class="duration-text">2:18</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">5</div>
+            <div class="col-title">
+                <img src="images/cover5.png" alt="pain the town red" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">pain the town red</span>
+                    <span class="song-artist">Doja Cat</span>
+                </div>
+            </div>
+            <div class="col-release">Dec 29, 2023</div>
+            <div class="col-album">Paint The Town Red</div>
+            <div class="col-actions">
+                <span class="duration-text">3:51</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">6</div>
+            <div class="col-title">
+                <img src="images/cover6.png" alt="Dancin On Night" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Dancin On Night</span>
+                    <span class="song-artist">Dua Lipa</span>
+                </div>
+            </div>
+            <div class="col-release">may 27, 2023</div>
+            <div class="col-album">Dance The Night(From Barbie Movie)</div>
+            <div class="col-actions">
+                <span class="duration-text">2:56</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">7</div>
+            <div class="col-title">
+                <img src="images/cover7.png" alt="Water" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Water</span>
+                    <span class="song-artist">Tyla</span>
+                </div>
+            </div>
+            <div class="col-release">Oct 21, 2023</div>
+            <div class="col-album">Water</div>
+            <div class="col-actions">
+                <span class="duration-text">3:20</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">8</div>
+            <div class="col-title">
+                <img src="images/cover8.png" alt="Push your limits" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Push your limits</span>
+                    <span class="song-artist">Brian michael</span>
+                </div>
+            </div>
+            <div class="col-release">Jan 2, 2024</div>
+            <div class="col-album">Push your limits</div>
+            <div class="col-actions">
+                <span class="duration-text">2:24</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">9</div>
+            <div class="col-title">
+                <img src="images/cover9.png" alt="Houdini" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Houdini</span>
+                    <span class="song-artist">Dua Lipa</span>
+                </div>
+            </div>
+            <div class="col-release">Dec 12, 2023</div>
+            <div class="col-album">Houdini</div>
+            <div class="col-actions">
+                <span class="duration-text">3:05</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">10</div>
+            <div class="col-title">
+                <img src="images/cover10.png" alt="Lala" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Lala</span>
+                    <span class="song-artist">myke towers</span>
+                </div>
+            </div>
+            <div class="col-release">Nov 20, 2023</div>
+            <div class="col-album">La vida es una</div>
+            <div class="col-actions">
+                <span class="duration-text">3:17</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">11</div>
+            <div class="col-title">
+                <img src="images/cover11.png" alt="I Wanna Be Yours" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">I Wanna Be Yours</span>
+                    <span class="song-artist">arctic monkeys</span>
+                </div>
+            </div>
+            <div class="col-release">Sep 9, 2023</div>
+            <div class="col-album">AM</div>
+            <div class="col-actions">
+                <span class="duration-text">3:03</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">12</div>
+            <div class="col-title">
+                <img src="images/cover12.png" alt="Paradise" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Paradise</span>
+                    <span class="song-artist">braaheim</span>
+                </div>
+            </div>
+            <div class="col-release">Jul 5, 2023</div>
+            <div class="col-album">Paradise</div>
+            <div class="col-actions">
+                <span class="duration-text">2:30</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">13</div>
+            <div class="col-title">
+                <img src="images/cover13.png" alt="As It Was" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">As It Was</span>
+                    <span class="song-artist">Harry Styles</span>
+                </div>
+            </div>
+            <div class="col-release">Sep 14, 2022</div>
+            <div class="col-album">As It Was</div>
+            <div class="col-actions">
+                <span class="duration-text">2:47</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">14</div>
+            <div class="col-title">
+                <img src="images/cover14.png" alt="Another Love" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Another Love</span>
+                    <span class="song-artist">Tom Odell</span>
+                </div>
+            </div>
+            <div class="col-release">Dec 19, 2013</div>
+            <div class="col-album">Another Love</div>
+            <div class="col-actions">
+                <span class="duration-text">4:06</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">15</div>
+            <div class="col-title">
+                <img src="images/cover15.png" alt="Daylight" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Daylight</span>
+                    <span class="song-artist">david kushner</span>
+                </div>
+            </div>
+            <div class="col-release">Jun 16, 2022</div>
+            <div class="col-album">Daylight</div>
+            <div class="col-actions">
+                <span class="duration-text">3:32</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">16</div>
+            <div class="col-title">
+                <img src="images/cover16.png" alt="Beggin" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Beggin</span>
+                    <span class="song-artist">Måneskin</span>
+                </div>
+            </div>
+            <div class="col-release">Feb 27, 2017</div>
+            <div class="col-album">Chosen</div>
+            <div class="col-actions">
+                <span class="duration-text">3:31</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">17</div>
+            <div class="col-title">
+                <img src="images/cover17.png" alt="What Was I Made For" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">What Was I Made For</span>
+                    <span class="song-artist">Billie Eilish</span>
+                </div>
+            </div>
+            <div class="col-release">Sep 6, 2023</div>
+            <div class="col-album">What Was I Made For</div>
+            <div class="col-actions">
+                <span class="duration-text">3:42</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">18</div>
+            <div class="col-title">
+                <img src="images/cover18.png" alt="Daddy Issues" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Daddy Issues</span>
+                    <span class="song-artist">The Neighbourhood</span>
+                </div>
+            </div>
+            <div class="col-release">Aug 21, 2015</div>
+            <div class="col-album">Wiped out</div>
+            <div class="col-actions">
+                <span class="duration-text">4:20</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">19</div>
+            <div class="col-title">
+                <img src="images/cover19.png" alt="Rolling In The Deep" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">Rolling In The Deep</span>
+                    <span class="song-artist">Adele</span>
+                </div>
+            </div>
+            <div class="col-release">Jun 5, 2011</div>
+            <div class="col-album">Adele 21</div>
+            <div class="col-actions">
+                <span class="duration-text">3:48</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+
+        <div class="track-row">
+            <div class="col-num">20</div>
+            <div class="col-title">
+                <img src="images/cover20.png" alt="OneShot" class="song-thumb">
+                <div class="song-info">
+                    <span class="song-name">OneShot</span>
+                    <span class="song-artist">mhost</span>
+                </div>
+            </div>
+            <div class="col-release">Dec 14, 2023</div>
+            <div class="col-album">Toca Donka</div>
+            <div class="col-actions">
+                <span class="duration-text">1:15</span>
+                <button class="options-icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+            <footer class="main-footer">
+                <div class="footer-brand">
+                    <h3>Melodies</h3>
+                    <p>Melodies is a website that has been created for over <span class="pink-text">2 years</span> ago and it is one of the most famous music player websites in the world. In this website you can listen and download songs for free, also if you want to premium plan you can <a href="#" class="pink-text">click here</a>.</p>
+                </div>
+                <div class="footer-links-columns">
+                    <div class="footer-column">
+                        <h4>Melodies</h4>
+                        <a href="#">Songs</a><a href="#">Radio</a><a href="#">Podcast</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Access</h4>
+                        <a href="#">Explore</a><a href="#">Artists</a><a href="#">Albums</a><a href="#">Trending</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="#">About</a><a href="#">Policy</a><a href="#">Social Media</a><a href="#">Support</a>
+                    </div>
+                </div>
+                <div class="footer-bottom-bar">
+                    <p>&copy; 2026 Melodies Player. All Rights Reserved.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+
+            if (menuToggle && sidebar && overlay) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    sidebar.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                    
+                    const icon = menuToggle.querySelector('i');
+                    if(sidebar.classList.contains('active')) {
+                        icon.className = "fa-solid fa-xmark";
+                    } else {
+                        icon.className = "fa-solid fa-bars";
+                    }
+                });
+
+                overlay.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                    menuToggle.querySelector('i').className = "fa-solid fa-bars";
+                });
+            }
+        });
+    </script>
+</body>
+</html>

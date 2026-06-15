@@ -1,0 +1,606 @@
+/* ==========================================================================
+   1. CORE FONTS & VARIABLES
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-main: #0a0a0d;
+    --bg-sidebar: #0e0e12;
+    --bg-card: #15151c;
+    --accent-pink: #df0a6b;
+    --accent-light-pink: #ff1a8c;
+    --text-color: #ffffff;
+    --text-muted: #797982;
+    --border-color: #1a1a24;
+}
+
+/* ==========================================================================
+   2. GLOBAL RESETS & HELPERS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+.pink-text { color: var(--accent-light-pink); }
+.muted-text { color: var(--text-muted); }
+.text-center { text-align: center; }
+
+/* FIX: Is container ko view height ke mutabik scrollable banaya hai taake sidebar fixed rahe */
+.app-container {
+    display: flex !important;
+    flex-direction: row !important; 
+    width: 100%;
+    height: 100vh; /* Browser ki window screen ke barabar lock */
+    overflow: hidden; /* Main window ka scroll band kiya taake inner components scroll hon */
+    position: relative;
+}
+
+/* ==========================================================================
+   MOBILE HEADER (Sirf choti screens par show hoga)
+   ========================================================================== */
+.mobile-header { 
+    display: none; 
+    width: 100%;
+    height: 60px;
+    background-color: var(--bg-sidebar);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.mobile-header .logo h2 {
+    font-size: 20px;
+    color: var(--accent-light-pink);
+    font-weight: 700;
+}
+
+.menu-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. SIDEBAR NAVIGATION SYSTEM (PERMANENT FULL BODY HEIGHT)
+   ========================================================================== */
+.sidebar {
+    width: 260px;
+    height: 100vh; /* Hamesha screen ki poori height par rahega */
+    background-color: var(--bg-sidebar);
+    padding: 25px 20px;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative; /* Sticky se relative kiya kyunki container ab locked hai */
+    overflow-x: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+}
+
+.logo h2 {
+    color: var(--accent-light-pink);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.sidebar-menu-wrapper {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding-right: 5px;
+}
+
+/* 1. Chrome, Safari, aur Edge ke liye scrollbar ghaib karne ka tareeqa */
+.sidebar-menu-wrapper::-webkit-scrollbar {
+    display: none; /* Isse scrollbar bilkul nazar nahi aayega */
+}
+
+/* 2. Firefox aur IE/Edge ke liye extra safety layout */
+.sidebar-menu-wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.menu-group { 
+    margin-bottom: 25px; 
+}
+
+.menu-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.nav-menu a,
+.footer-links a {
+    display: flex !important;
+    align-items: center !important;
+    color: var(--text-muted) !important;
+    text-decoration: none !important;
+    padding: 12px !important;
+    margin-bottom: 4px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.25s ease !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+.nav-menu a i,
+.footer-links a i { 
+    margin-right: 12px !important; 
+    width: 20px !important; 
+    font-size: 16px !important; 
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.nav-menu a:hover,
+.footer-links a:hover {
+    color: var(--text-color) !important;
+    background-color: var(--border-color) !important;
+}
+
+.nav-menu a.active {
+    background: linear-gradient(90deg, rgba(223, 10, 107, 0.25) 0%, rgba(223, 10, 107, 0.08) 60%, rgba(223, 10, 107, 0) 100%) !important;
+    border-left: 4px solid var(--accent-light-pink) !important;
+    color: var(--text-color) !important;
+    font-weight: 600 !important;
+    border-radius: 0px 8px 8px 0px !important;
+    padding-left: 12px !important;
+}
+
+.nav-menu a.active i {
+    color: var(--accent-light-pink) !important;
+}
+
+.add-playlist { 
+    color: var(--accent-light-pink) !important; 
+}
+
+.footer-links { 
+    margin-top: auto !important; 
+    padding-top: 15px !important;
+    border-top: 1px solid var(--border-color) !important;
+    flex-shrink: 0 !important;
+}
+
+/* MAIN CONTENT BLOCK (Aapki styling ke mutabik main wrapper jo right side par scroll hoga) */
+.main-content {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   FINAL FIXED - MUSIC GENRES IMAGES PROPER GAP
+   ========================================================================== */
+.final-genres-grid-container {
+    display: grid !important;
+    /* Desktop par line se 4 columns banenge */
+    grid-template-columns: repeat(4, 1fr) !important; 
+    
+    /* 🔥 MAXIMUM GAP: Images ke beech ka proper gap yahan se control ho raha hai */
+    gap: 45px !important; 
+    
+    width: 100% !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.final-genre-img-item {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important; /* Perfect standard rectangle shape */
+    border-radius: 14px !important; /* Smooth edges */
+    display: block !important;
+    object-fit: cover !important; /* Image ko stretch ya squeeze hone se bachata hai */
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+    
+    /* Smooth Hover Animation */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+/* Hover Effect */
+.final-genre-img-item:hover {
+    transform: translateY(-6px) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablets & Small Laptops (Up to 1024px) */
+@media (max-width: 1024px) {
+    .final-genres-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important; /* Screen choti hone par 2 columns */
+        gap: 30px !important; /* Tablet par proper gap */
+    }
+}
+
+/* Mobile Screens (Up to 768px) */
+@media (max-width: 768px) {
+    .final-genres-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important; /* Mobile par stable 2 columns */
+        gap: 25px !important; /* Mobile par images ke aapas ka proper gap */
+        
+        /* Mobile par left side se space dene ke liye */
+        padding-left: 40px !important; 
+        padding-right: 15px !important; 
+    }
+    
+    .final-genre-img-item {
+        border-radius: 10px !important;
+    }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   MEDIA QUERY: LAPTOPS & MID BREAKPOINTS (1024px and below)
+   ========================================================================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .app-container {
+        display: flex !important;
+        flex-direction: row !important; 
+        height: 100vh !important;
+        overflow: hidden !important;
+    }
+    .sidebar { 
+        width: 80px !important; 
+        padding: 25px 10px !important; 
+        align-items: center !important; 
+        height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .sidebar .logo, .sidebar .menu-title, .sidebar span { display: none !important; }
+    .sidebar-menu-wrapper { padding-right: 0 !important; width: 100% !important; }
+    .nav-menu a, .footer-links a { justify-content: center !important; width: 45px !important; height: 45px !important; border-radius: 50% !important; padding: 0 !important; margin-bottom: 8px !important; }
+    .nav-menu a i, .footer-links a i { margin-right: 0 !important; font-size: 18px !important; }
+    .nav-menu a.active { border-left: none !important; background: var(--accent-pink) !important; }
+    
+    .main-content { padding: 30px 20px !important; flex: 1 !important; min-width: 0 !important; height: 100vh !important; overflow-y: auto !important; }
+    .card-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important; }
+}
+
+@media (max-width: 950px) {
+    .top-search-bar { flex-direction: column !important; align-items: stretch !important; gap: 15px !important; }
+    .search-box { max-width: 100% !important; }
+    .top-nav-links { justify-content: space-between !important; width: 100% !important; }
+    
+    .join-platform-container { flex-direction: column !important; align-items: stretch !important; gap: 30px !important; padding: 30px 20px !important; }
+    .join-form-box { max-width: 100% !important; }
+}
+
+/* ==========================================================================
+   🛠️ SMARTPHONES VERSION (768px and below) - NO UPPER CLIPPED TEXT / LOGO
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Main structural frame setup */
+    .app-container { 
+        display: block !important; 
+        position: relative !important;
+        width: 100% !important;
+        height: 100vh !important; 
+        overflow: hidden !important; 
+    }
+
+    /* 1. Mobile Top Bar (Header) */
+    .mobile-header { 
+        display: flex !important; 
+        justify-content: space-between !important;
+        align-items: center !important;       
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 60px !important;               
+        background-color: var(--bg-sidebar, #140511) !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;     
+        border-bottom: 1px solid var(--border-color, rgba(255, 255, 255, 0.1)) !important;
+        z-index: 1000 !important; 
+    }
+
+    /* Top Navbar Logo Styling */
+    .mobile-header .logo,
+    .mobile-header h1,
+    .mobile-header h2,
+    .mobile-header .brand-name {
+        display: inline-flex !important;
+        align-items: center !important;
+        margin: 0 !important;                 
+        padding: 0 !important;                
+        line-height: 60px !important;         
+        height: 60px !important;              
+        font-size: 24px !important;           
+        font-weight: 700 !important;
+        color: var(--accent-pink, #df0a6b) !important; 
+    }
+
+    /* Menu Hamburger Button Alignment */
+    .mobile-header #menu-toggle {
+        background: transparent !important;
+        border: none !important;
+        color: #fff !important;
+        font-size: 24px !important;
+        cursor: pointer !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: inline-flex !important;
+        align-items: center !important;       
+        height: 60px !important;              
+    }
+    
+    /* 2. Slide-in Sidebar (Drawer Menu) - Cleaned Structure */
+    .sidebar { 
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 270px !important; 
+        height: 100vh !important; 
+        padding: 25px 0 !important; /* Balanced safety padding */
+        background-color: var(--bg-sidebar, #140511) !important;
+        z-index: 999 !important; 
+        transform: translateX(-100%) !important; 
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important; 
+        box-shadow: 8px 0 30px rgba(0, 0, 0, 0.5) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important; 
+        overflow: hidden !important; /* Prevents text leaks from top boundary */
+    }
+    
+    /* Sidebar Active State Trigger */
+    .sidebar.active {
+        transform: translateX(0) !important; 
+    }
+    
+    /* 🔥 CRITICAL FORCE-HIDE: Sidebar ke andar kisi bhi kisam ke clipped text logo ko block karna */
+    .sidebar .logo,
+    .sidebar .logo h1,
+    .sidebar .logo h2,
+    .sidebar div[class*="logo"] { 
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Visibility Force Styles for core navigation menus */
+    .sidebar .menu-title, 
+    .sidebar span,
+    .sidebar .nav-menu a,
+    .sidebar .footer-links a { 
+        display: flex !important; 
+    }
+
+    /* Sub-menu main headers ("MENU", "LIBRARY") spacing reset */
+    .sidebar .menu-title {
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+        color: rgba(255, 255, 255, 0.4) !important;
+        margin: 5px 0 12px 15px !important;
+        padding: 0 !important;
+    }
+    
+    /* Clean inner wrapper container for list scrolls */
+    .sidebar-menu-wrapper {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        flex: 1 !important;
+        padding: 5px 20px 0 20px !important; 
+        box-sizing: border-box !important;
+        -ms-overflow-style: none !important; 
+        scrollbar-width: none !important; 
+    }
+    .sidebar-menu-wrapper::-webkit-scrollbar { display: none !important; }
+
+    .menu-group {
+        margin-bottom: 25px !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Sidebar Standard Navigation Links Layout */
+    .sidebar .nav-menu a,
+    .sidebar .footer-links a { 
+        justify-content: flex-start !important; 
+        align-items: center !important;
+        width: 100% !important; 
+        height: auto !important;
+        border-radius: 8px !important; 
+        padding: 12px 15px !important; 
+        margin: 0 0 6px 0 !important;
+        box-sizing: border-box !important;
+    }
+    
+    .sidebar .nav-menu a i,
+    .sidebar .footer-links a i { 
+        display: inline-block !important;
+        margin-right: 15px !important; 
+        font-size: 16px !important; 
+    }
+    
+    .sidebar .nav-menu a.active { 
+        border-left: 4px solid var(--accent-pink) !important; 
+        background: linear-gradient(90deg, rgba(223, 10, 107, 0.15) 0%, rgba(223, 10, 107, 0) 100%) !important;
+        border-radius: 0 8px 8px 0 !important;
+    }
+
+    .sidebar .footer-links {
+        margin-top: auto !important;
+        width: 100% !important;
+        padding: 15px 20px 0 20px !important;
+        border-top: 1px solid var(--border-color, rgba(255,255,255,0.1)) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Dark Overlay Background */
+    .sidebar-overlay {
+        display: block !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: rgba(0, 0, 0, 0.7) !important;
+        backdrop-filter: blur(4px) !important;
+        z-index: 998 !important; 
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transition: opacity 0.3s ease !important;
+    }
+
+    .sidebar-overlay.active {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    /* 3. Right Main Content Panel & Top Nav Links Flex Fix */
+    .main-content { 
+        width: 100% !important;
+        padding: 85px 15px 20px 15px !important; 
+        box-sizing: border-box !important;
+        height: 100vh !important; 
+        overflow-y: auto !important;
+    }
+    
+    .top-search-bar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        gap: 12px !important;
+    }
+
+    .search-box { 
+        width: 100% !important; 
+        max-width: 100% !important; 
+    }
+
+    /* 4. Top Nav Links Layout */
+    .top-nav-links { 
+        display: flex !important; 
+        flex-wrap: wrap !important; 
+        justify-content: space-between !important; 
+        align-items: center !important;
+        width: 100% !important; 
+        gap: 10px !important; 
+    }
+    
+    .top-nav-links a { 
+        display: inline-flex !important; 
+        justify-content: center !important;
+        align-items: center !important;
+        flex: 1 !important; 
+        min-width: 80px !important;
+        padding: 10px 5px !important;
+        font-size: 12px !important;
+        color: #fff !important;
+        text-decoration: none !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 30px !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .top-nav-links button { 
+        flex: 1.2 !important; 
+        min-width: 90px !important;
+        padding: 10px !important; 
+        font-size: 12px !important; 
+        box-sizing: border-box !important;
+    }
+
+    .desktop-only { display: none !important; }
+    
+    /* Layout components text scaling */
+    .hero-banner { padding: 25px 15px !important; width: 100% !important; box-sizing: border-box !important; }
+    .hero-content h1 { font-size: 22px !important; }
+    .hero-content p { font-size: 12px !important; margin-bottom: 15px !important; }
+    .hero-buttons { flex-direction: column !important; gap: 8px !important; }
+    .hero-buttons button { width: 100% !important; }
+    
+    /* Grid system scaling updates */
+    .card-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important; gap: 12px !important; }
+    .artists-grid { grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)) !important; gap: 10px !important; }
+    .artist-card img { width: 70px !important; height: 70px !important; }
+    .video-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
+
+    /* Tables responsiveness modification */
+    .trending-table-header { display: none !important; } 
+    .song-item { padding: 10px !important; width: 100% !important; box-sizing: border-box !important; }
+    .col-num { width: 10% !important; }
+    .col-title { width: 70% !important; padding-right: 5px !important; }
+    .col-time { width: 20% !important; }
+    .col-date, .col-album { display: none !important; } 
+    
+    /* Footer & Conversion boxes adjustments */
+    .join-platform-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 20px 15px !important;
+        gap: 20px !important;
+    }
+    .join-info h2 { font-size: 22px !important; text-align: center !important; }
+    .join-info p { text-align: center !important; font-size: 13px !important; }
+    .join-form-box { max-width: 100% !important; width: 100% !important; padding: 20px 12px !important; }
+    
+    .footer-links-columns { flex-direction: column !important; gap: 20px !important; }
+    .footer-bottom-bar { flex-direction: column-reverse !important; gap: 12px !important; text-align: center !important; }
+    .footer-socials { margin-left: 0 !important; }
+    .footer-socials a { margin: 0 8px !important; }
+}
