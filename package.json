@@ -1,0 +1,12 @@
+{
+  "name": "codealpha_music_player",
+  "version": "1.0.0",
+  "description": "Melodies - Premium Web Based Music Player",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

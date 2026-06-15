@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodies - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+    <header class="mobile-header">
+        <div class="logo"><h2>Melodies</h2></div>
+        <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="app-container">
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="logo desktop-logo-only">
+                <h2>Melodies</h2>
+            </div>
+
+            <div class="sidebar-menu-wrapper">
+                
+                <div class="menu-group">
+                    <p class="menu-title">Menu</p>
+                    <nav class="nav-menu">
+                        <a href="#" class="active"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                        <a href="#"><i class="fa-solid fa-compass"></i> <span>Discover</span></a>
+                        <a href="#"><i class="fa-solid fa-compact-disc"></i> <span>Albums</span></a>
+                        <a href="#"><i class="fa-solid fa-microphone"></i> <span>Artists</span></a>
+                    </nav>
+                </div>
+
+                <div class="menu-group">
+                    <p class="menu-title">Library</p>
+                    <nav class="nav-menu">
+                        <a href="#"><i class="fa-solid fa-clock"></i> <span>Recently Added</span></a>
+                        <a href="#"><i class="fa-solid fa-heart"></i> <span>Most Played</span></a>
+                    </nav>
+                </div>
+
+                <div class="menu-group">
+                    <p class="menu-title">Playlist and Favorite</p>
+                    <nav class="nav-menu">
+                        <a href="#"><i class="fa-solid fa-star"></i> <span>Your Favorite</span></a>
+                        <a href="#"><i class="fa-solid fa-list"></i> <span>Your Playlist</span></a>
+                        <a href="#" class="add-playlist"><i class="fa-solid fa-plus"></i> <span>Add Playlist</span></a>
+                    </nav>
+                </div>
+                
+            </div> <div class="footer-links">
+                <a href="#setting"><i class="fa-solid fa-gear"></i> <span>Setting</span></a>
+                <a href="#logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> <span>Logout</span></a>
+            </div>
+            
+        </aside> 
+
+        <main class="main-content">
+            
+            <div class="top-search-bar">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search for music, artists...">
+                </div>
+                <div class="top-nav-links">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Premium</a>
+                    <button class="btn-top-premium">Log In</button>
+                    <button class="btn-top-login">Sign Up</button>
+                </div>
+            </div>
+
+            <section class="hero-banner">
+                <div class="hero-content">
+                    <h1>All the <span class="pink-text">Best Songs</span><br>in One Place</h1>
+                    <p>On our platform you can listen to trending music, high quality songs, watch high definition videos and albums smoothly without interruption.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">Discover Now</button>
+                        <button class="btn-secondary">Watch Video</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <h3>Weekly Top <span class="pink-text">Songs</span></h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="card-grid" id="weekly-grid">
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185.png" alt="Art"><h4>Whatever It Takes</h4><p>Imagine Dragons</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (1).png" alt="Art"><h4>Skyfall</h4><p>Adele</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (2).png" alt="Art"><h4>Superman</h4><p>Eminem</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (3).png" alt="Art"><h4>Believer</h4><p>Imagine Dragons</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (4).png" alt="Art"><h4>The Lockest</h4><p>Alan Walker</p></div>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <h3>New Release <span class="pink-text">Songs</span></h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="card-grid" id="release-grid">
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (5).png" alt="Art"><h4>Time</h4><p>Luciano</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (6).png" alt="Art"><h4>112</h4><p>Jazzek</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (7).png" alt="Art"><h4>We Don't Care</h4><p>Kayanu & Dj Gullum</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (8).png" alt="Art"><h4>Who I Am</h4><p>Alan Walker & Elias</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (9).png" alt="Art"><h4>Baixo</h4><p>XXAnteria</p></div>
+                </div>
+            </section>
+
+            <section class="trending-section">
+                <div class="section-header">
+                    <h3>Trending <span class="pink-text">Songs</span></h3>
+                </div>
+                <div class="trending-table-header">
+                    <span class="col-num">#</span>
+                    <span class="col-title">Title</span>
+                    <span class="col-date">Release Date</span>
+                    <span class="col-album">Album</span>
+                    <span class="col-time"><i class="fa-regular fa-clock"></i></span>
+                </div>
+                <div class="songs-list-container" id="trending-list">
+                    <div class="song-item">
+                        <span class="col-num">1</span>
+                        <div class="col-title">
+                            <img src="c:\Users\Administrator\Downloads\The_Neighbourhood_-_The_Neighbourhood 1.png" alt="Thumb">
+                            <div class="title-info"><h4>Sorfcore</h4><p>The neighberhood</p></div>
+                        </div>
+                        <span class="col-date">Nov 4, 2023</span>
+                        <span class="col-album">Hard to imagine the neighbourhood Ever Changing</span>
+                        <span class="col-time">3:26</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="col-num">2</span>
+                        <div class="col-title">
+                            <img src="c:\Users\Administrator\Downloads\The_Neighbourhood_-_The_Neighbourhood 2.png" alt="Thumb">
+                            <div class="title-info"><h4>Skyfall Beats</h4><p>nightmares</p></div>
+                        </div>
+                        <span class="col-date">Oct 26, 2023</span>
+                        <span class="col-album">nightmares</span>
+                        <span class="col-time">2:45</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="col-num">3</span>
+                        <div class="col-title">
+                            <img src="c:\Users\Administrator\Downloads\The_Neighbourhood_-_The_Neighbourhood 3.png" alt="Thumb">
+                            <div class="title-info"><h4>Greedy</h4><p>tale mcrae</p></div>
+                        </div>
+                        <span class="col-date">Dec 30, 2023</span>
+                        <span class="col-album">Greedy</span>
+                        <span class="col-time">2:11</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="col-num">4</span>
+                        <div class="col-title">
+                            <img src="c:\Users\Administrator\Downloads\The_Neighbourhood_-_The_Neighbourhood 4.png" alt="Thumb">
+                            <div class="title-info"><h4>Lovin On me</h4><p>jack harlow</p></div>
+                        </div>
+                        <span class="col-date">Dec 30, 2023</span>
+                        <span class="col-album">Lovin On me</span>
+                        <span class="col-time">2:18</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="col-num">5</span>
+                        <div class="col-title">
+                            <img src="c:\Users\Administrator\Downloads\The_Neighbourhood_-_The_Neighbourhood 8.png" alt="Thumb">
+                            <div class="title-info"><h4>pain the town red</h4><p>Doja cat</p></div>
+                        </div>
+                        <span class="col-date">Dec 29, 2023</span>
+                        <span class="col-album">paint the town red</span>
+                        <span class="col-time">3:51</span>
+                    </div>
+
+                    <div class="song-item">
+                        <span class="col-num">6</span>
+                        <div class="col-title">
+                            <img src="c:\Users\Administrator\Downloads\The_Neighbourhood_-_The_Neighbourhood 6.png" alt="Thumb">
+                            <div class="title-info"><h4>Dancin On Night</h4><p>Dualipa</p></div>
+                        </div>
+                        <span class="col-date">May 27, 2024</span>
+                        <span class="col-album">Dance The Night (From Barbie Movie)</span>
+                        <span class="col-time">3:20</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn-view-more">+ View All</button>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <h3>Popular <span class="pink-text">Artists</span></h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="artists-grid" id="artists-grid">
+                    <div class="artist-card"><img src="c:\Users\Administrator\Downloads\69824 2.png" alt="Artist"><h4>Eminem</h4></div>
+                    <div class="artist-card"><img src="c:\Users\Administrator\Downloads\69824 3.png" alt="Artist"><h4>The Weeknd</h4></div>
+                    <div class="artist-card"><img src="c:\Users\Administrator\Downloads\69824 4.png" alt="Artist"><h4>Adele</h4></div>
+                    <div class="artist-card"><img src="c:\Users\Administrator\Downloads\69824 5.png" alt="Artist"><h4>Lana Del Ray</h4></div>
+                    <div class="artist-card"><img src="c:\Users\Administrator\Downloads\69824 6.png" alt="Artist"><h4>Harry Styles</h4></div>
+                    <div class="artist-card"><img src="c:\Users\Administrator\Downloads\69824 7.png" alt="Artist"><h4>Billie Eilish</h4></div>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <h3>Music <span class="pink-text">Video</span></h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="video-grid" id="video-grid">
+                    <div class="video-card"><img src="c:\Users\Administrator\Downloads\Frame 217.png" alt="Video"><h4>Gossip</h4><p>Måneskin</p></div>
+                    <div class="video-card"><img src="c:\Users\Administrator\Downloads\Frame 217 (1).png" alt="Video"><h4>Shape Of You</h4><p>Ed Sheeran</p></div>
+                    <div class="video-card"><img src="c:\Users\Administrator\Downloads\Frame 217 (2).png" alt="Video"><h4>Someone Like You</h4><p>Adele</p></div>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <h3>Top <span class="pink-text">Albums</span></h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="card-grid" id="albums-grid">
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (10).png" alt="Art"><h4>Adele 21</h4><p>Adele</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (11).png" alt="Art"><h4>Scorpion</h4><p>Drake</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (12).png" alt="Art"><h4>Harry's House</h4><p>Harry Styles</p></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (13).png" alt="Art"><h4>Born To Die</h4><p>Lana Dey Ray</p></div>
+                </div>
+            </section>
+
+            <section class="music-section">
+                <div class="section-header">
+                    <h3>Mood <span class="pink-text">Playlist</span></h3>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="card-grid" id="mood-grid">
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (14).png" alt="Art"><h4>Sad Playlist</h4></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (15).png" alt="Art"><h4>Chill Vibes</h4></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (16).png" alt="Art"><h4>Workout Playlist</h4></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (17).png" alt="Art"><h4>Love Vibes</h4></div>
+                    <div class="card"><img src="c:\Users\Administrator\Downloads\Frame 185 (18).png" alt="Art"><h4>Happy Playlist</h4></div>
+                </div>
+            </section>
+
+            <section class="join-platform-container">
+                <div class="join-info">
+                    <h2>Join Our Platform</h2>
+                    <p>You can be one of the <span class="pink-text">members</span> of our platform by just adding some necessary information. If you already have an account on our website you can just click the <a href="#" class="pink-text">Login button</a>.</p>
+                </div>
+                <div class="join-form-box">
+                    <h3>Sign Up / <span class="muted-text">Login</span></h3>
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn-submit-form">Sign Up</button>
+                        <div class="divider"><span>Or</span></div>
+                        <button type="button" class="btn-google-login"><i class="fa-brands fa-google"></i> Sign Up With Google</button>
+                    </form>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <div class="footer-brand">
+                    <h3>Melodies</h3>
+                    <p>Melodies is a website that has been created for over <span class="pink-text">2 years</span> ago and it is one of the most famous music player websites in the world. In this website you can listen and download songs for free, also if you want to premium plan you can <a href="#" class="pink-text">click here</a>.</p>
+                </div>
+                <div class="footer-links-columns">
+                    <div class="footer-column">
+                        <h4>Melodies</h4>
+                        <a href="#">Songs</a><a href="#">Radio</a><a href="#">Podcast</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Access</h4>
+                        <a href="#">Explore</a><a href="#">Artists</a><a href="#">Albums</a><a href="#">Trending</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <a href="#">About</a><a href="#">Policy</a><a href="#">Social Media</a><a href="#">Support</a>
+                    </div>
+                </div>
+                <div class="footer-bottom-bar">
+                    <p>&copy; 2026 Melodies Player. All Rights Reserved.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+
+            if (menuToggle && sidebar && overlay) {
+                menuToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    sidebar.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                    
+                    const icon = menuToggle.querySelector('i');
+                    if(sidebar.classList.contains('active')) {
+                        icon.className = "fa-solid fa-xmark";
+                    } else {
+                        icon.className = "fa-solid fa-bars";
+                    }
+                });
+
+                overlay.addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                    overlay.classList.remove('active');
+                    menuToggle.querySelector('i').className = "fa-solid fa-bars";
+                });
+            }
+        });
+    </script>
+</body>
+</html>
